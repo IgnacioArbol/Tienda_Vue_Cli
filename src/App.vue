@@ -1,10 +1,16 @@
 <template>
   <div id="app">
+    <div v-if="productos">
     <notifications group="notificacion"/>
     <cabecera/>
     <router-view/>
     <pie/>
-    
+    </div>
+    <div v-if="!productos" class="cargando">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,6 +18,7 @@
 
 import cabecera from './components/cabecera.vue'
 import pie from'./components/pie.vue'
+import {db} from './db.js'
 
 
 export default {
@@ -20,9 +27,18 @@ export default {
     cabecera,
     pie
     
-  }
-
+  },
+  data () {
+      return {
+        productos:{}      
+    }
+  },
+    firestore:{
+      productos:db.collection('productos')
+      
+    }
 }
+
 </script>
 
 <style lang="scss">
@@ -37,6 +53,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color:color(terciary);
+}
+.cargando{
+  height: 100%;
+}
+.spinner-borde{
+  margin:auto;
 }
 
 

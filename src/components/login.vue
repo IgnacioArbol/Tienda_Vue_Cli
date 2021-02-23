@@ -43,16 +43,16 @@
 
               <div class="form-group row mb-0">
                 <div class="col-md-8 offset-md-4">
-                  <button type="submit" class="btn btn-primary">Login</button>
+                  <button type="submit" class="btn boton">Login</button>
                 </div>
               </div>
               
             </form>
             
             <div class="mt-5">
-                  <button class="btn btn-primary ml-3 mr-3" @click="google">Google</button>
-                  <button class="btn btn-primary ml-3 mr-3" @click="twitter">Twitter</button>
-                  <button class="btn btn-primary ml-3 mr-3" @click="facebook">Facebook</button>
+                  <button class="btn boton ml-3 mr-3" @click="google">Google</button>
+                  <button class="btn boton ml-3 mr-3" @click="twitter">Twitter</button>
+                  <button class="btn boton ml-3 mr-3" @click="facebook">Facebook</button>
                 </div>
           </div>
         </div>

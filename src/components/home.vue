@@ -1,6 +1,18 @@
 <template lang="html">
 
   <section class="home">
+
+  <div><h1 class="titulo mt-5">Novedades</h1></div>
+  
+  <div id="slideshow">
+    <div class="slide-wrapper">
+      <div class="slide"><img class="fotoslide" src="../assets/gta-6.jpg"></div>
+      <div class="slide"><img class="fotoslide" src="../assets/fortnite.jpg"></div>
+      <div class="slide"><img class="fotoslide" src="../assets/forza.jpg"></div>
+    </div>
+  </div>
+
+
     <h1 class="titulo mt-5 mb-3">Nuestro catálogo</h1>
     <div class="contenedor d-flex flex-row flex-wrap justify-content-around ml-5 mr-5 ">
     <div class="producto pr-2 pl-2 mt-3 mb-3 mr-2 ml-2" v-for="producto in productos" v-bind:key="producto.id">
@@ -117,7 +129,7 @@
   justify-content: space-between;
   max-width:300px ;
   
-  background-color: color(primary);
+  background-color: rgb(196, 196, 196);
   border: 2px solid color(terciary);
   border-radius: 10px;
   &:hover{
@@ -157,6 +169,43 @@
         opacity:0;
         transition:1s;
 
+}
+#slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+
+.slide-wrapper {
+  width: 2912px;
+  -webkit-animation: slide 18s ease infinite;
+}
+
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+.fotoslide{
+  height: 512px;
+  object-fit: cover;
+}
+
+.slide-number {
+  color: #000;
+  text-align: center;
+  font-size: 10em;
+}
+
+@-webkit-keyframes slide {
+  20% {margin-left: 0px;}
+  30% {margin-left: -728px;}
+  50% {margin-left: -728px;}
+  60% {margin-left: -1456px;}
+  70% {margin-left: -1456px;}
+  80% {margin-left: -1456px;}
+  90% {margin-left: -1456px;}
 }
 </style>
 

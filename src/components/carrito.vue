@@ -10,11 +10,12 @@
     
       <p class="precio">total a pagar= {{producto.price*producto.quantity}}€</p>
       </div>
+      <div class="derecha">
+      <input class="mr-2" v-model.number="producto.quantity" type="number" :max="producto.stock" min="0" value="1">
       
-      <input class="" v-model.number="producto.quantity" type="number" :max="producto.stock" min="0" value="1">
-      <div class="d-flex">
-      <button class="btn btn-danger " @click="eliminar(producto.id)">eliminar</button>
-      <button class="btn btn-success" @click="comprar(producto.productid,producto.quantity,producto.stock,producto.id)">comprar</button>
+      <button class="btn btn-danger mr-2" @click="eliminar(producto.id)">eliminar</button>
+      <button class="btn btn-success mr-2" @click="comprar(producto.productid,producto.quantity,producto.stock,producto.id)">comprar</button>
+      
       </div>
       
       
@@ -132,7 +133,7 @@
 <style lang="scss">
 .contenedorcarrito{
   border:1px solid color(primary);
-  background-color: color(primary);
+  background-color: rgb(206, 206, 206);
     &:hover{
       transition: 0.5s;
       background-color: azure;
@@ -142,10 +143,14 @@
     width: 300px;
   }
 }
+.derecha{
+  display:flex;
+  flex-wrap:wrap;
+}
 .imagen{
     height: 150px;
     max-height: 150px;
-    margin-left: auto;
+    margin-left: 20px;
     margin-right: auto;
   }
 </style>
