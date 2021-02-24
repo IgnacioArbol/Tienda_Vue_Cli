@@ -73,7 +73,7 @@
 
               <div class="form-group row mb-0">
                 <div class="col-md-8 offset-md-4">
-                  <button type="submit" class="btn boton">Register</button>
+                  <button type="submit" class="btn boton">Registrar</button>
                 </div>
               </div>
             </form>
@@ -110,7 +110,7 @@ export default {
           console.log(data)
           this.$notify({
           group: 'notificacion',
-          title: 'Important message',
+          title: 'Bien!',
           text: 'Te has registrado correctamente',
           type: 'success'
           });

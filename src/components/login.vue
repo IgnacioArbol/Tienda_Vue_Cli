@@ -92,7 +92,7 @@ export default {
           this.$router.replace({ name: "home" });
           this.$notify({
             group: 'notificacion',
-            title: 'Important message',
+            title: 'Bien!',
             text: 'Te has logueado correctamente',
             type: 'success'
             });
@@ -107,7 +107,7 @@ export default {
         this.$router.replace({ name: "home" });
         this.$notify({
           group: 'notificacion',
-          title: 'Important message',
+          title: 'Bien!',
           text: 'Te has logueado correctamente con Google',
           type: 'success'
           });
@@ -118,7 +118,7 @@ export default {
         this.$router.replace({ name: "home" });
         this.$notify({
           group: 'notificacion',
-          title: 'Important message',
+          title: 'Bien!',
           text: 'Te has logueado correctamente con Twitter',
           type: 'success'
           });
@@ -129,7 +129,7 @@ export default {
         this.$router.replace({ name: "home" });
         this.$notify({
           group: 'notificacion',
-          title: 'Important message',
+          title: 'Bien!',
           text: 'Te has logueado correctamente con Facebook',
           type: 'success'
           });

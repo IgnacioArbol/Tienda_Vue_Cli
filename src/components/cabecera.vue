@@ -11,12 +11,12 @@
       <router-link to="/login"><div v-if="!user.loggedIn"><i class="fas fa-user-circle fa-3x mr-5" ></i></div></router-link>
       <div v-if="user.loggedIn">
       <img :src="user.data.photoURL" style="max-width:50px; border-radius:100px">
-      <span class="ml-3" style="color:white">{{this.user.data.displayName}}</span>
+      <span class="numerosencarrito d-none d-xl-block" >{{this.user.data.displayName}}</span>
       </div>
       
       <button class="btn btn-danger ml-3 mr-3" v-if="user.loggedIn"  @click.prevent="logout"> <span>Cerrar sesion</span></button>
       <router-link to="/carrito" v-if="user.loggedIn"><i class="fas fa-shopping-cart fa-3x mr-2 ml-3"></i></router-link>
-      <p class="d-sm-none" v-if="user.loggedIn" style="color:white">{{carrito.length}}</p>
+      <p class="numerosencarrito" v-if="user.loggedIn" >{{carrito.length}}</p>
       
   </div>
 </nav>
@@ -119,6 +119,10 @@
   &:hover{
     filter: invert(98%) sepia(95%) saturate(15%) hue-rotate(182deg) brightness(104%)
   }
+}
+.numerosencarrito{
+  color:white;
+  margin: auto;
 }
 
 
